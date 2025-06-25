@@ -6,6 +6,7 @@ import Dashboard from "./pages/Dashboard";
 import BookAppointment from "./pages/BookAppointment";
 import MyAppointments from "./pages/MyAppointments";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import DoctorDashboard from "./pages/DoctorDashboard";
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/doctor-dashboard" element={<DoctorDashboard />} />
+
         <Route path="/book" element={<BookAppointment />} />
         <Route path="/appointments" element={<MyAppointments />} />
       </Routes>

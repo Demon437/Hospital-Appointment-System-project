@@ -47,7 +47,9 @@ function MyAppointments() {
               className="list-group-item d-flex justify-content-between align-items-center"
             >
               <div>
-                <strong>Dr. {a.doctor.username}</strong> <br />
+                <strong>
+                  {a.doctor.username.startsWith("Dr.") ? a.doctor.username : `Dr. ${a.doctor.username}`}
+                </strong> <br />
                 <span className="text-muted">{new Date(a.date).toLocaleString()}</span> <br />
                 <span className={`badge ${a.status === "booked" ? "bg-success" : "bg-secondary"}`}>
                   {a.status}
