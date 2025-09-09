@@ -23,9 +23,21 @@ function Register() {
     }
   };
 
+  const backgroundStyle = {
+    minHeight: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundImage: "url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1470&q=80')",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
+    padding: "20px"
+  };
+
   return (
-    <div className="container d-flex justify-content-center align-items-center vh-100">
-      <div className="card shadow p-4" style={{ maxWidth: "450px", width: "100%" }}>
+    <div style={backgroundStyle}>
+      <div className="card shadow p-4" style={{ maxWidth: "450px", width: "100%", borderRadius: "15px", backgroundColor: "rgba(255, 255, 255, 0.85)" }}>
         <h3 className="text-center mb-4 text-primary">Register</h3>
 
         {error && (
