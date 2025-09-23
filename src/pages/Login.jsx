@@ -11,10 +11,11 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
+      const res = await axios.post("https://hospital-backend-myi3.onrender.com/api/auth/login", {
         username,
         password,
       });
+
       localStorage.setItem("token", res.data.token);
 
       if (res.data.user.role === "doctor") {
@@ -23,7 +24,7 @@ const Login = () => {
         navigate("/dashboard");
       }
     } catch (err) {
-      setError("Invalid username or password");
+      setError(err.response?.data?.message || "Invalid username or password");
     }
   };
 

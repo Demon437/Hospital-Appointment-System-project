@@ -15,13 +15,14 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/register", form);
+      await axios.post("https://hospital-backend-myi3.onrender.com/api/auth/register", form);
       alert("Registered Successfully");
-      navigate("/"); 
+      navigate("/");
     } catch (err) {
       setError(err.response?.data?.message || "Registration failed");
     }
   };
+
 
   const backgroundStyle = {
     minHeight: "100vh",
